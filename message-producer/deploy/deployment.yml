@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-producer
+  labels:
+    app: message-producer
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: message-producer
+  template:
+    metadata:
+      labels:
+        app: message-producer
+    spec:
+      containers:
+        - name: message-producer
+          image: sandeepbhardwaj/message-producer:v1
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: message-producer
+spec:
+  selector:
+    app: message-producer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30695
+  type: LoadBalancer

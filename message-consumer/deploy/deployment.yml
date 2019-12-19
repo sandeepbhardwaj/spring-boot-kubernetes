@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-consumer
+  labels:
+    app: message-consumer
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: message-consumer
+  template:
+    metadata:
+      labels:
+        app: message-consumer
+    spec:
+      containers:
+        - name: message-consumer
+          image: sandeepbhardwaj/message-consumer:v1
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: message-consumer
+spec:
+  selector:
+    app: message-consumer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30695
+  type: LoadBalancer
