@@ -5,7 +5,7 @@ metadata:
   labels:
     app: message-producer
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: message-producer
@@ -32,5 +32,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      nodePort: 30695
   type: LoadBalancer

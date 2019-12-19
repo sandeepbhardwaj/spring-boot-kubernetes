@@ -1,15 +1,13 @@
-package com.koko.spring.messageconsumer;
+package com.koko.springboot.messageproducer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MessageConsumerApplication {
+public class MessageProducerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MessageConsumerApplication.class, args);
+		SpringApplication.run(MessageProducerApplication.class, args);
 	}
 
 }
-
-
