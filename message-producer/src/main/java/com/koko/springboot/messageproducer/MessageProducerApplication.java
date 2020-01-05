@@ -13,5 +13,5 @@ public class MessageProducerApplication {
     public static void main(String[] args) {
         SpringApplication.run(MessageProducerApplication.class, args);
     }
-    
+
 }
