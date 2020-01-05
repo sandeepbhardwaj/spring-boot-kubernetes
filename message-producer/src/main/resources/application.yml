@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: message-producer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+
+logging:
+  file: message-producer.log
+
