@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: message-producer
-          image: sandeepbhardwaj/message-producer:v1
+          image: sandeepbhardwaj/message-producer
           ports:
             - containerPort: 8080
 

@@ -10,14 +10,14 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 @RestController
 public class MessageController {
-    @Autowired
-    private RestTemplate restTemplate;
+	@Autowired
+	private RestTemplate restTemplate;
 
-    @RequestMapping("/message")
-    private String message() {
-        log.info("Inside message method");
-        String message = restTemplate.getForObject("http://message-producer/message", String.class);
-        log.info("Message from message-produces:s {}", message);
-        return message;
-    }
+	@RequestMapping("/message")
+	private String message() {
+		log.info("Inside message method");
+		String message = restTemplate.getForObject("http://message-producer/message", String.class);
+		log.info("Message from message-produces:s {}", message);
+		return message;
+	}
 }

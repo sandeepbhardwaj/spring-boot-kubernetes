@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class MessageProducerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MessageProducerApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(MessageProducerApplication.class, args);
+	}
 
 }
