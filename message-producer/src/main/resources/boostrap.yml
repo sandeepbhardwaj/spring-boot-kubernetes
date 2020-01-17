@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    kubernetes:
+      config:
+        name: message-producer
+        namespace: default
+        enabled: true
+      reload:
+        enabled: true
+        mode: POLLING
+        strategy: REFRESH

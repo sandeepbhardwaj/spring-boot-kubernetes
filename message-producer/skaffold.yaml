@@ -5,7 +5,11 @@ metadata:
 build:
   artifacts:
   - image: sandeepbhardwaj/message-producer
+    docker:
+      dockerfile: Dockerfile
+
 deploy:
   kubectl:
     manifests:
-    - deploy/deployment.yml
+      - deploy/config.yml
+      - deploy/deployment.yml

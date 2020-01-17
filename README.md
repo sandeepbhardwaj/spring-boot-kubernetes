@@ -1,7 +1,7 @@
 # spring-boot-kubernetes
 Spring boot microservices on Kubernetes
 
-Setup Environment
+## Setup Environment
 ```
 To be able to work with the docker daemon on your mac/linux host use the docker-env command in your shell:
 $> eval $(minikube docker-env)
@@ -30,4 +30,20 @@ $> kubectl create -f deploy/deployment.yml
 $> kubectl get pods
 
 $> kubectl get svc
+```
+
+
+## Using skaffold
+```
+skaffold run --tail
+
+minikube service list
+kubectl apply -f config.yml
+curl http://192.168.99.100:31944/actuator/refresh -d {} -H "Content-Type: application/json"
+```
+
+skaffold commands
+```
+skaffold run --tail
+skaffold delete
 ```
