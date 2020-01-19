@@ -10,5 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Setter
 public class MessageConfiguration {
+	private String greeting = "Default greeting";
 	private String message = "Default message";
 }

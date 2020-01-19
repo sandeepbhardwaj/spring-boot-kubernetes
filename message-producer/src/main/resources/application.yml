@@ -2,13 +2,15 @@ spring:
   application:
     name: message-producer
 
+# Needed for kubernetes cloud configmap
 management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - "*"
+  endpoint:
+    restart:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
 
-logging:
-  file: message-producer.log
-
+#logging:
+#  file: message-producer.log

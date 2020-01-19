@@ -4,4 +4,13 @@ metadata:
   name: message-producer
 data:
   application.yml: |-
+    greeting: Hello from configmap !!!
+
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: messagek8config
+data:
+  application.yml: |-
     message: Say Hello to the World

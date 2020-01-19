@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+      config:
+        enabled: true
+        name: message-producer
+        sources:
+          - namespace: default
+          - name: messagek8config
+
+
+

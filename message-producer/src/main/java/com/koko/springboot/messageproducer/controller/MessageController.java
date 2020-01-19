@@ -22,6 +22,6 @@ class MessageController {
 
 	@Scheduled(fixedDelay = 3000)
 	public void schedule() {
-		System.out.println(configuration.getMessage());
+		log.info("Greeting :{}, Message: {}", configuration.getGreeting(), configuration.getMessage());
 	}
 }
