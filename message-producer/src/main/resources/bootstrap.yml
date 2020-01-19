@@ -5,6 +5,7 @@ spring:
         enabled: true
       config:
         enabled: true
+        namespace: default
         name: message-producer
         sources:
           - namespace: default
