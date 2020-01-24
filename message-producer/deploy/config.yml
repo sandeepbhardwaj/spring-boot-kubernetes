@@ -4,7 +4,7 @@ metadata:
   name: message-producer
 data:
   application.yml: |-
-    greeting: Hello from configmap !!!
+    message-producer.greeting: Greeting from external config
 
 ---
 kind: ConfigMap
@@ -13,4 +13,4 @@ metadata:
   name: messagek8config
 data:
   application.yml: |-
-    message: Say Hello to the World
+    message-producer.message: Message from external config

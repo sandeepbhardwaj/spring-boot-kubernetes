@@ -5,11 +5,11 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@ConfigurationProperties(prefix = "")
+@ConfigurationProperties(prefix = "message-producer")
 @Configuration
 @Getter
 @Setter
 public class MessageConfiguration {
-	private String greeting = "Default greeting";
-	private String message = "Default message";
+	private String greeting;
+	private String message;
 }

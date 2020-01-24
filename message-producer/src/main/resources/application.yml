@@ -12,5 +12,8 @@ management:
     info:
       enabled: true
 
+message-producer:
+  message: "Message from application.yml"
+  greeting: "Greeting from application.yml"
 #logging:
 #  file: message-producer.log
