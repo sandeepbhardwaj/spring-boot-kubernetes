@@ -19,6 +19,9 @@ spec:
           image: sandeepbhardwaj/message-producer:v1
           ports:
             - containerPort: 8080
+          env:
+            - name: SPRING_CLOUD_K8_ENABLED
+              value: "true"
 
 ---
 apiVersion: v1

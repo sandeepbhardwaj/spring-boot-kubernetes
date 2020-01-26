@@ -1,6 +1,7 @@
 spring:
   cloud:
     kubernetes:
+      enabled: ${SPRING_CLOUD_K8_ENABLED:false} #to enable disable kubernetes features
       reload:
         enabled: true
       config:
@@ -10,6 +11,3 @@ spring:
         sources:
           - namespace: default
           - name: messagek8config
-
-
-

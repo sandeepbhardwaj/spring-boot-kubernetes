@@ -15,13 +15,13 @@ class MessageController {
 	private MessageConfiguration configuration;
 
 	@RequestMapping("/message")
-	public String getMessage() {
+	public String greeting() {
 		log.info("Inside message method");
-		return configuration.getMessage();
+		return configuration.getGreeting();
 	}
 
 	@Scheduled(fixedDelay = 3000)
-	public void schedule() {
-		log.info("Greeting :{}, Message: {}", configuration.getGreeting(), configuration.getMessage());
+	public void scheduleMessage() {
+		log.info("Greeting :{}, Message: {}", configuration.getGreeting(), configuration.getFarewell());
 	}
 }
