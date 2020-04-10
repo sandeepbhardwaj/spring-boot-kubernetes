@@ -1,0 +1,18 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+build:
+  artifacts:
+    - image: sandeepbhardwaj/message-producer
+      context: ./message-producer/
+    - image: sandeepbhardwaj/message-consumer
+      context: ./message-consumer/
+deploy:
+  kubectl:
+    manifests:
+      - ./message-producer/deploy/*
+      - ./message-consumer/deploy/*
+portForward:
+  - resourceType: deployment
+    resourceName: message-consumer
+    port: 80
+    localPort: 8080
